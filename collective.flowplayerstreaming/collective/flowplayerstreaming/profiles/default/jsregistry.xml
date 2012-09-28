@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+  <javascript id="++resource++flowplayerstreaming.js/jquery.media.js"
+            cacheable="True"
+            compression="none"
+            enabled="True"
+            expression=""
+            cookable="False"
+            inline="False"/>
+</object>

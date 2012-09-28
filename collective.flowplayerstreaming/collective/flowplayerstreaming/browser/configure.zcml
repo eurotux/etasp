@@ -1,0 +1,47 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.flowplayerstreaming">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+  
+  <!--browser:page
+    for="collective.flowplayerstreaming.interfaces.IVideo"
+    name="video_view"
+    class=".video_view.VideoView"
+    template="video_view.pt"
+    permission="zope2.View"
+  /-->
+
+  <browser:page
+    for="*"
+    name="video_view"
+    class=".video_view.VideoView"
+    template="video_view.pt"
+    permission="zope2.View"
+  />
+
+  <browser:page
+    for="*"
+    name="rtsp_view"
+    class=".rtsp_view.RTSPView"
+    template="rtsp_view.pt"
+    permission="zope2.View"
+  />
+
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory for javascript -->
+  <browser:resourceDirectory
+    name="flowplayerstreaming.plugins"
+    directory="flowplayer_plugins"
+  />
+
+  <browser:resourceDirectory
+    name="flowplayerstreaming.js"
+    directory="js"
+  />
+
+</configure>

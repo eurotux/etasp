@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.flowplayerstreaming">
+
+<body>
+  <metal:content-core fill-slot="content-core">
+
+    <!--a class="autoFlowPlayer video"
+       tal:attributes="href view/href;style view/scale"></a-->
+
+
+    <a style="display:block;width:520px;height:330px"  
+       id="player"> 
+        </a> 
+        <script type="text/javascript">
+            flowplayer("player", "http://etasp.dmz.eurotux.local/static/flowplayer-3.0.3.swf", {
+                  clip: {
+                        provider: 'h264streaming'
+                  },
+                                  playlist: [
+                        { url: 'http://h264-demo.code-shop.com/demo/flowplayer/bbb.mp4' }  
+                        ],              
+                  plugins: {
+                        h264streaming: {
+                          url: 'http://localhost:9021/etasp2/++resource++flowplayerstreaming.plugins/flowplayer.h264streaming-3.0.5.swf'
+                        },
+                  }
+            });
+        </script>
+
+  </metal:content-core>
+</body>
+</html>
