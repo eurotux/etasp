@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="etasp.api">
+
+    <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="etaspapi"
+      class=".etasp_api.ETASPApiView"
+      allowed_attributes="getInstanceMetadata getDatabaseInfo getResourceUsage pack"
+      permission="zope2.View"
+      />
+
+
+
+</configure>
+
+
